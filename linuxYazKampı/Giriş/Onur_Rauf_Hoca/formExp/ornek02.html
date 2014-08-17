@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LYK 2014</title>
+</head>
+<body>
+  <form id="formtest" name="formtest" method="post" action="">
+    <label for="isim">İsminiz</label>
+    <input type="text" name="isim" id="isim">
+    <!-- Bir satir bosluk birakmak icin <br> isareti kullandik -->
+    <br>
+    <!-- <label> yerine asagidaki gibi bir kullanim da mumkun -->
+    <span>Cinsiyetiniz:</span>&nbsp;
+    <!-- &nbsp; => Non-breaking Space, yani "bosluk karakteri". Bkz: http://en.wikipedia.org/wiki/Non-breaking_space -->
+    <!-- Alt kisimda bir "radio button" ornegi bulunmakta -->
+    <input type="radio" name="cinsiyet" value="erkek">Erkek
+    <input type="radio" name="cinsiyet" value="kadin">Kadın
+    <br>
+    <button type="submit">Gönder</button>
+  </form>
+</body>
+</html>

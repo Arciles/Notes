@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LYK 2014</title>
+<style>
+/* id=formtest olan HTML elemanlarina atanan ozellikler */ 
+#formtest {
+  width: 600px; /* genislik ayarla */
+}
+/* Tum "fieldset" elemanlari icin atanan ozellikler */
+fieldset {
+  border: 2px dashed #ccc; /* kenarlik ekle */
+}
+/* class=kenarlik altinda bulunan "legend" elemanlari icin atanan ozellikler */
+.kenarlik legend {
+  font-weight: bold; /* yazilari kalinlastir */
+}
+/* class=sol-taraf seklinde olusturulan elemanlara atanan ozellikler */
+.sol-taraf {
+  float: left; /* sola cek */
+}
+/* class=sag-taraf seklinde olusturulan elemanlara atanan ozellikler */
+.sag-taraf {
+  float: right; /* saga cek */
+}
+/* class=orta seklinde olusturulan elemanlara atanan ozellikler */
+.orta {
+  display: table; /* tablo gibi goster */
+  margin: 0 auto; /* elemanlari ortala, yani "align center" */
+}
+</style>
+</head>
+<body>
+  <form id="formtest" name="formtest" method="post" action="">
+    <fieldset class="kenarlik">
+      <legend>İsim ve Şifre</legend>
+      <div class="sol-taraf">
+        <label for="isim">İsminiz</label>
+        <input type="text" name="isim" id="isim" placeholder="İsminizi yazınız!!">
+        <br>
+        <label for="sifre">Şifre</label>
+        <input type="password" name="sifre" id="sifre" placeholder="Şifrenizi yazınız...">
+      </div>
+      <div class="sag-taraf">
+        <div>Seçiminiz:</div>
+        <br>
+        <input type="checkbox" name="secenek" value="cicek">Çiçek<br>
+        <input type="checkbox" name="secenek" value="kolonya">Kolonya
+        <br>
+        <label for="yorum">Yorumunuz:</label>
+        <br>
+        <textarea name="yorum" id="yorum" cols="25" rows="10"></textarea>
+        <br>
+        <br>
+        <label for="arabalar">Arabalar:</label>
+        <br>
+        <select name="arabalar" id="arabalar">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes" selected>Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+    </fieldset>
+    <br>
+    <div class="orta">
+      <button type="submit">Gönder</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</body>
+</html>

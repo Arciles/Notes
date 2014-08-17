@@ -1,0 +1,88 @@
+//alert("loaded");
+
+/*	
+	Multiline comment
+*/
+var phoneBook={
+	"ali"		:	"123221321",
+	"ozan"	:	"516551651",
+	"salih"	:	"656546541",
+};
+
+function sayHi(name) {
+
+	if (name.length) {
+		
+	console.log(name.length);
+	}	
+	return 'ff';	
+};
+
+function forcu(array) {
+	for (var i=0;i<array.length;i++) {
+			console.log("Hi" + array[i]);
+	};
+};
+
+function foreachci(array) {
+	for (var i in array) {
+		console.log("hi " + array[i]);	
+	};
+};
+
+function whileci(array) {
+	var i=0;	
+	while(i<array.length){
+		console.log("hi " + array[i++]);
+		
+	};	
+
+};
+
+function validate(color) {
+	var colorArray=["blue","red","purple","green"];
+	
+	for (var i in colorArray) {
+		
+		var validColor=colorArray[i];
+		if (validColor==color) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function changeColor(query) {
+
+var as= prompt("Renk giriniz");
+
+	while (!validate(as)){
+		var as= prompt("Renk giriniz");
+
+	}
+	var elements=document.querySelectorAll(query);
+
+	elements=Array.prototype.slice.call(elements);	
+
+	for (var i=0;i<elements.length;i++) {		
+	
+		var e=elements[i];
+		 
+		e.style.color=as;
+		
+	};
+}
+
+changeColor("h2");
+
+
+
+
+
+
+
+
+
+
+
+

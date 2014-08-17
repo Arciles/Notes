@@ -1,0 +1,77 @@
+*{
+	margin:0; padding: 0;	border:0;	outline: 0;	font-size: 100%;	text-decoration: none;
+}
+
+.clear{
+	clear: both;
+}
+body{
+ font-family: "BebasNeueRegular", Arial, Helvetica, sans-serif;
+font-size: 30px;
+color: rgba(1,1,1,1);
+background-color: rgba(255,2555,255,1);
+}
+
+p{
+margin-left: 35px;
+}
+
+li {
+	list-style-type: none;
+	float: left;
+	margin-left: 15px;
+}
+
+#container{
+	margin: 0 auto;
+	width: 1024px;
+}
+
+.inputs{
+	
+border:3px solid #000000;
+
+}
+header{
+height: 120px;
+color: rgba(150,5,150,1);
+background-color: rgba(230,230,230,1);
+border:1px solid #000;
+}
+
+h1{
+margin-top: 30px;
+margin-left: 30px;
+font-size: 30px;
+}
+
+nav{
+	height: 30px;
+	border:1px dashed #ff0000;
+}
+
+#content-container{
+	margin-top: 10px;
+}
+
+#content {
+	background-color: #0f0;
+	width: 700px;
+	min-height: 250px;
+	float: left;	
+}
+
+#sidebar{
+float: right;
+width: 300px;
+background-color: #ff0;
+min-height: 250px;
+}
+
+.sub-title{
+	color: rgba(156,216,156,1);
+}
+
+.desc{
+	color: rgba(44,56,78,0.7);
+}
