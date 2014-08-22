@@ -14,7 +14,7 @@ class LoginForm(forms.Form):
         username = self.cleaned_data.get("username")
         password = self.cleaned_data.get("password")
 
-        if not username or not password:    #2 sinden biri boşsa
+        if not username or not password:
             return self.cleaned_data
 
         user = authenticate(username=username,

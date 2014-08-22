@@ -28,8 +28,22 @@
 <div id="container">
 
     <header>
+
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                <li class="welcome">Hoşgeldin {{ user }}</li>
+                <li><a href="{% url "inbox" %}">Mesajlar ({{ message_count }})</a></li>
+                <li><a href="{% url "logout" %}">Çıkış yap</a></li>
+                {% else %}
+                <li><a href="{% url "login" %}">Üye Girişi</a></li>
+                <li><a href="{% url "register" %}">Kayıt ol</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
         <div id="logo">
-            <a href="#"><img src="{% static "images/logo.png" %}" /></a>
+            <a href="{% url "home" %}"><img src="{% static "images/logo.png" %}" /></a>
         </div>
     </header>
 
@@ -40,6 +54,8 @@
         {% endblock %}
 
     </div>
+
+    <footer>Petimebak Linux Yaz Kampı 2014'te demo proje olarak hazırlanmıştır.</footer>
 
 </div>
 

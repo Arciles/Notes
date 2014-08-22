@@ -1,10 +1,15 @@
 #container {
-    width: 870px;
+    width: 700px;
     margin: auto;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    margin-top: 40px;
+    margin-top: 0;
     overflow: hidden;
 }
 
@@ -20,12 +25,11 @@ p {
 
 .content {
     margin-top: 40px;
-    margin-left: 30px;
+
 }
 
 .content h3 {
     font-size: 30px;
-    font-weight: bold;
     color: #3d3f3e;
     font-weight: normal;
 }
@@ -50,9 +54,23 @@ form p i {
     border-bottom: 1px dotted #d8d8d8;
 }
 
-form input[type='text'] {
+form input[type='text'],
+form input[type='password']{
     width: 170px;
     font-size: 26px;
+}
+
+form label {
+    width: 200px;
+    display: inline-block;
+}
+
+form .helptext {
+    font-size: 20px;
+    color: gray;
+    display: block;
+    padding-bottom: 10px;
+    margin-left: 210px;
 }
 
 form input[type='submit'] {
@@ -82,6 +100,7 @@ form input[type='submit'] {
 #request-list .request-item .profile {
     float: left;
     width: 130px;
+    height: 140px;
 }
 
 #request-list .request-item .profile img {
@@ -101,10 +120,15 @@ form input[type='submit'] {
     font-size: 20px;
 }
 
-#request-list .request-item a {
+#request-list .request-item  a {
     color: gray;
     font-size: 20px;
     text-decoration: none;
+}
+
+#request-list .request-item h4 a {
+    font-size: 27px;
+    color: #222;
 }
 
 
@@ -120,4 +144,113 @@ form input[type='submit'] {
     text-decoration: none;
     padding: 20px 30px;
     letter-spacing: -2px;
+}
+
+.contact form {
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact h3 {
+    margin: 20px 2px;
+}
+
+.contact input[type='submit'] {
+    font-size: 24px;
+    margin-top: 74px;
+}
+
+#id_text {
+    width: 580px;
+    height: 100px;
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid yellow;
+    resize: none;
+}
+
+.advert-info {
+    font-size: 20px;
+    padding: 20px;
+}
+
+footer {
+    padding: 20px 0;
+    margin-top: 10px;
+    color: gray;
+}
+
+.success-message {
+    background-color: #c3c9c6;
+    font-size: 30px;
+    color: #262626;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.conversation-item {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid yellow;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.conversation-item p {
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+}
+
+.conversation-item .image {
+    float: left;
+    margin-right: 30px;
+}
+
+.conversation-item .image img {
+    border-radius: 50%;
+}
+
+.conversation-item .conversation-message {
+    margin-top: 10px;
+    float: left;
+}
+
+.conversation-item a {
+    color: gray;
+    text-decoration: none;
+}
+
+nav {
+
+}
+
+nav ul {
+    background: #fff252;
+    padding: 0;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+nav ul li {
+    padding: 8px 20px;
+    float: right;
+    color: #393939;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav ul li.welcome {
+    float: left;
 }
