@@ -19,13 +19,31 @@
             </div>
 
             <div class="summary">
-                <h4>{{ advert.region }}'de {{ advert.pet_type.name }} bakacak biri arıyorum</h4>
+                <h4>{{ advert.region }} bölgesinde {{ advert.pet_type.name }} bakacak biri arıyorum</h4>
                 <p>{{ advert.start_date|date:"j F" }} ve {{ advert.end_date|date:"j F" }} tarihleri arasında günlük {{ advert.price }} TL vereceğim.</p>
                 <a href="#">@{{ advert.user.username }}</a>
             </div>
 
     </div>
 
+
+    <div class="photos">
+        <h3>Fotoğraflar {% if advert.user == user %}<a class="photo-add-link" href="{% url "photo_add" advert.id %}">(Ekle)</a>{% endif %}</h3>
+
+        <ul class="advert-images">
+            {% for image in advert.images.all %}
+            <li>
+                <a href="{{ image.image.url }}" target="_blank">
+                    <img src="{{ image.image.url }}" alt="{{ image.title }}" width="100"/>
+                </a>
+            </li>
+            {% empty %}
+            <li>Bu ilanda hiç fotoğraf yok.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if user.is_authenticated %}
     <div class="contact">
         <form action="{% url "new_message" advert.id %}" method="post">
             {% csrf_token %}
@@ -34,6 +52,7 @@
             <input type="submit" value="Gönder"/>
         </form>
     </div>
+    {% endif %}
 
     <p class="advert-info">
         İlan en son 12 mayis tarihinde güncellenmiştir

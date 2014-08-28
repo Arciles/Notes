@@ -78,6 +78,15 @@ DATABASES = {
     }
 }
 
+#import dj_database_url
+#DATABASES = {
+ #   "default": dj_database_url.config(default='postgres://localhost')
+#}
+
+
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#ALLOWED_HOSTS = ['*']
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -106,4 +115,16 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/uploads")
+
+MEDIA_URL = "/static/uploads/"
+
 LOGIN_URL = '/login'
+
+
+try:
+    from settings_local import *
+except ImportError:
+    print "settings_local.py file not found"
